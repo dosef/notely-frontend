@@ -1,0 +1,142 @@
+@import "../../../globals/base.scss";
+
+.list {
+    padding: 16px;
+    background-color: #FFF;
+    margin: 0 8px 16px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 68px;
+    height: 22px;
+    opacity: 0.3;
+    background-color: #fff;
+    overflow: hidden;
+    & span {
+        right: -100px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        font-size: 14px;
+        line-height: 13px;
+        opacity: 0;
+    }
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+        & span {
+            right: 20px;
+            opacity: 1;
+            text-align: right;
+            transition: right ease-in-out 0.15s, opacity ease-in-out 0.15s;
+        }
+    }
+    &:before, &:after {
+        position: absolute;
+        right: 4px;
+        content: ' ';
+        height: 14px;
+        width: 2px;
+        background-color: #333;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.addButton {
+    display: block;
+    position: relative;
+    margin-top: 12px;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 0;
+    padding-left: 10px;
+    border: solid 1px $primary;
+    width: 30px;
+    line-height: 40px;
+
+    &:hover {
+        cursor: pointer;
+        color: #fff;
+        transition: all ease-in-out 0.15s;
+    }
+    
+}
+
+.addInput {
+    border: none;
+    background: transparent;
+    color: rgba(0,0,0,0.90);
+    font-size: 26px;
+    font-weight: 600;
+    vertical-align: middle;
+    width: 30px;
+    line-height: 30px;
+    height: 40px;
+    text-align: left;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::placeholder {
+        text-align: left;
+        font-size: 26px; 
+        font-weight: 600;
+        display: block;
+        color: $primary;
+    }
+
+    &:focus {
+        border-radius: 50px;
+        outline: none;
+        font-size: 14px;
+        padding-right: 20px;
+        width: 73%;
+    }
+}
+
+.buttonTrigger {
+    position: absolute;
+    border: none;
+    text-align: right;
+    right: 10px;
+    background-color: transparent;
+    color: $primary;
+    font-size: 17px;
+    font-weight: 600;
+    outline: none;
+    height: 100%;
+    line-height: 40px;
+    width: 80px;
+    top: 0;
+    opacity: 0;
+
+    &:hover {
+        cursor: pointer;
+        color: $secondary;
+    }
+}
+
+.active {
+    width: calc(100% - 30px);
+    border-radius: 50px;
+    outline: none;
+    font-size: 14px;
+    padding-right: 20px;
+
+    .buttonTrigger {
+        opacity: 1;
+        transition: opacity ease-in-out 1s;  
+    }
+}

@@ -1,0 +1,51 @@
+@import "../../../globals/base.scss";
+
+.newInputWrapper {
+    margin-bottom: 28px;
+}
+
+.submitButton {
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 10px 24px;
+    border: solid 1px #c76b03;
+    color: $primary;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+        background-color: $primary;
+        color: #fff;
+        cursor: pointer;
+        transition: all ease-in-out 0.15s;
+    }
+}
+
+.input {
+    line-height: 38px;
+    margin-right: 12px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    min-width: 300px;
+    padding: 0 18px;
+
+    &::placeholder {
+        padding-left: 12px;
+        font-size: 14px;
+    }
+    &:focus {
+        border-radius: 0;
+
+    }
+}
+
+.errorMessage {
+    background-color: rgb(238, 77, 77);
+    border-radius: 5px;
+    line-height: 18px;
+    padding: 12px;
+    color: #fff;
+    display: inline-block;
+}

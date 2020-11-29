@@ -1,0 +1,30 @@
+
+.block {
+    text-align: center;
+}
+
+.content {
+    padding: 12px 28px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    background-color: transparent;
+}
+
+.list {
+    text-align: left;
+    list-style: none;
+}
+
+.listColumns {
+    column-count: 3;
+    -webkit-column-break-inside: avoid-region;
+    > * {
+        display: block;
+        overflow: hidden;
+    }
+}
+
+/* div {
+    color: red;
+} */
